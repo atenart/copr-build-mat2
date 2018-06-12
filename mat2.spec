@@ -42,7 +42,7 @@ metadata.
 %py3_install
 
 %check
-#%{__python3} setup.py test
+%{__python3} setup.py test
 
 %files
 %license LICENSE
