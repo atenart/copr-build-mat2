@@ -1,7 +1,11 @@
-spec = mat2.spec
+ifndef spec
+$(error spec is not set)
+endif
+
+name := $(basename $(notdir $(spec)))
 version := $(shell rpmspec -q --qf "%{version}" $(spec))
 release := $(shell rpmspec -q --qf "%{release}" $(spec))
-pn := mat2-$(version)-$(release)
+pn := $(name)-$(version)-$(release)
 
 default: all
 all: srpm
