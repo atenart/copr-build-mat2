@@ -17,7 +17,7 @@ all: srpm
 srpm: $(pn).src.rpm
 
 $(pn).src.rpm: prepare
-	rpmbuild $(extra) --nodeps -bs $(spec)
+	rpmbuild -bs --nodeps $(extra) $(spec)
 
 prepare: $(spec)
 ifeq ($(shell id -u),0)
