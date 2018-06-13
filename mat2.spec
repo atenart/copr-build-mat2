@@ -11,11 +11,14 @@ BuildRequires:	python3-devel
 BuildArch:	noarch
 
 Requires:	python3
+Requires:	python3-gobject
 Requires:	python3-mutagen
 Requires:	python3-cairo
-Requires:	poppler-utils
-Requires:	gdk-pixbuf2
+Requires:	cairo-gobject
+Requires:	poppler-glib
+Requires:	gdk-pixbuf2-modules
 Requires:	perl-Image-ExifTool
+Requires:	mailcap
 
 %description
 Metadata consist of information that characterizes data.
