@@ -7,8 +7,8 @@ Summary:        Python bindings for Nautilus
 
 Group:          Development/Libraries
 License:        GPLv2+
-URL:            http://www.gnome.org/
-Source0:        http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{version}/%{name}-%{version}.tar.xz
+URL:            https://www.gnome.org/
+Source0:        https://ftp.gnome.org/pub/GNOME/sources/%{name}/%{version}/%{name}-%{version}.tar.xz
 
 BuildRequires:  python3-devel
 BuildRequires:  nautilus-devel
