@@ -20,4 +20,7 @@ $(pn).src.rpm: prepare
 	rpmbuild $(extra) --nodeps -bs $(spec)
 
 prepare: $(spec)
-	spectool -g -R $(spec)
+ifeq ($(shell id -u),0)
+	dnf -y install rpmdevtools
+endif
+	spectool -f -g -R $(spec)
