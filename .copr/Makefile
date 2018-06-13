@@ -3,8 +3,8 @@ $(error spec is not set)
 endif
 
 name := $(basename $(notdir $(spec)))
-version := $(shell rpmspec -q --qf "%{version}" $(spec))
-release := $(shell rpmspec -q --qf "%{release}" $(spec))
+version := $(shell rpmspec -q --qf "%{version}\n" $(spec) | head -1)
+release := $(shell rpmspec -q --qf "%{release}\n" $(spec) | head -1)
 pn := $(name)-$(version)-$(release)
 
 default: all
