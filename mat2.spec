@@ -1,6 +1,6 @@
 Name:		mat2
-Version:	0.1.1
-Release:	1.20180610git4600ce34%{?dist}
+Version:	0.1.3
+Release:	1%{?dist}
 Summary:	Mat2 removes metadata from common file types.
 
 License:	GPLv3+
@@ -53,5 +53,9 @@ metadata.
 %{_bindir}/%{name}
 
 %changelog
+* Tue Jul 06 2018 Antoine Tenart <antoine.tenart@ack.tf> - 0.1.3-1
+- Bump to 0.1.3.
+- See https://0xacab.org/jvoisin/mat2/tags/0.1.3
+- See https://0xacab.org/jvoisin/mat2/tags/0.1.2
 * Tue Jun 12 2018 Antoine Tenart <antoine.tenart@ack.tf> - 0.1.1-1
 - First mat2 package.
