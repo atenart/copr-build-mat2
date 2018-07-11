@@ -1,5 +1,5 @@
 Name:		mat2
-Version:	0.1.3
+Version:	0.2.0
 Release:	1%{?dist}
 Summary:	Mat2 removes metadata from common file types.
 
@@ -53,6 +53,9 @@ metadata.
 %{_bindir}/%{name}
 
 %changelog
+* Tue Jul 11 2018 Antoine Tenart <antoine.tenart@ack.tf> - 0.2.0-1
+- Bump to 0.2.0.
+- See https://0xacab.org/jvoisin/mat2/tags/0.2.0
 * Tue Jul 06 2018 Antoine Tenart <antoine.tenart@ack.tf> - 0.1.3-1
 - Bump to 0.1.3.
 - See https://0xacab.org/jvoisin/mat2/tags/0.1.3
