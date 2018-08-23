@@ -1,15 +1,16 @@
 %global NAUTILUS_MAYOR_VER  3.0
 %global sname nautilus-python
+%global major_version 1.2
 
 Name:           python3-nautilus
-Version:        1.2
+Version:        %{major_version}.2
 Release:        1%{?dist}
 Summary:        Python bindings for Nautilus
 
 Group:          Development/Libraries
 License:        GPLv2+
 URL:            https://www.gnome.org/
-Source0:        https://ftp.gnome.org/pub/GNOME/sources/%{sname}/%{version}/%{sname}-%{version}.tar.xz
+Source0:        https://ftp.gnome.org/pub/GNOME/sources/%{sname}/%{major_version}/%{sname}-%{version}.tar.xz
 
 BuildRequires:  python3-devel
 BuildRequires:  nautilus-devel
@@ -51,6 +52,8 @@ rm -f $RPM_BUILD_ROOT%{_libdir}/pkgconfig/%{sname}.pc
 %dir %{_datadir}/%{sname}/extensions
 
 %changelog
+* Thu Aug 23 2018 Antoine Tenart <antoine.tenart@ack.tf> - 1.2.2-1
+- Update to 1.2.2.
 * Wed Jun 13 2018 Antoine Tenart <antoine.tenart@ack.tf> - 1.2-1
 - Imported the python2-nautilus spec, reworked it to produce a
   python3-nautilus package, bump to 1.2, and removed the doc.
