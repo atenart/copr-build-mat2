@@ -35,6 +35,16 @@ Maybe you don't want to disclose those information on the web.
 This is precisely the job of MAT2: getting rid, as much as possible, of
 metadata.
 
+%package -n mat2-nautilus
+Summary: Mat2 Nautilus extension
+Requires: mat2
+Requires: nautilus
+Requires: python3-nautilus
+
+%description -n mat2-nautilus
+Mat2 Nautilus extension to allow removing metadata using Mat2 using a
+dedicated menu item.
+
 %prep
 %setup -q
 
@@ -43,14 +53,20 @@ metadata.
 
 %install
 %py3_install
+install -m 0644 -D nautilus/nautilus_mat2.py %{buildroot}/usr/share/nautilus-python/extensions/mat2.py
 
 #%check
 #%{__python3} setup.py test
+#%{__python3} mat2 -c
 
 %files
 %license LICENSE
 %{python3_sitelib}/*
 %{_bindir}/%{name}
+
+%files -n mat2-nautilus
+%license LICENSE
+/usr/share/nautilus-python/extensions/mat2.py
 
 %changelog
 * Thu Aug 23 2018 Antoine Tenart <antoine.tenart@ack.tf> - 0.3.0-1
