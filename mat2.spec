@@ -1,5 +1,5 @@
 Name:		mat2
-Version:	0.3.1
+Version:	0.4.0
 Release:	1%{?dist}
 Summary:	Mat2 removes metadata from common file types.
 
@@ -69,6 +69,9 @@ install -m 0644 -D nautilus/mat2.py %{buildroot}/usr/share/nautilus-python/exten
 /usr/share/nautilus-python/extensions/mat2.py
 
 %changelog
+* Thu Oct 11 2018 Antoine Tenart <antoine.tenart@ack.tf> - 0.4.0-1
+- Bump to 0.4.0.
+- See https://0xacab.org/jvoisin/mat2/tags/0.4.0
 * Thu Sep 01 2018 Antoine Tenart <antoine.tenart@ack.tf> - 0.3.1-1
 - Bump to 0.3.1.
 - See https://0xacab.org/jvoisin/mat2/tags/0.3.1
