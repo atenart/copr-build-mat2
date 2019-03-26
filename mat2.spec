@@ -55,6 +55,7 @@ dedicated menu item.
 %install
 %py3_install
 install -m 0644 -D nautilus/mat2.py %{buildroot}/usr/share/nautilus-python/extensions/mat2.py
+install -m 0644 -D doc/mat2.1 %{buildroot}%{_mandir}/man1/mat2.1
 
 #%check
 #%{__python3} setup.py test
@@ -64,6 +65,7 @@ install -m 0644 -D nautilus/mat2.py %{buildroot}/usr/share/nautilus-python/exten
 %license LICENSE
 %{python3_sitelib}/*
 %{_bindir}/%{name}
+%{_mandir}/man1/mat2.1*
 
 %files -n mat2-nautilus
 %license LICENSE
