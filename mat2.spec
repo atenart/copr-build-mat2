@@ -73,6 +73,7 @@ install -m 0644 -D nautilus/mat2.py %{buildroot}/usr/share/nautilus-python/exten
 * Fri Mar 22 2019 Antoine Tenart <antoine.tenart@ack.tf> - 0.8.0-1
 - Bump to 0.8.0.
 - See https://0xacab.org/jvoisin/mat2/tags/0.8.0
+- See https://0xacab.org/jvoisin/mat2/tags/0.7.0
 * Sat Nov 10 2018 Antoine Tenart <antoine.tenart@ack.tf> - 0.6.0-1
 - Bump to 0.6.0.
 - See https://0xacab.org/jvoisin/mat2/tags/0.6.0
