@@ -16,7 +16,6 @@ Requires:	python3-mutagen
 Requires:	python3-cairo
 Requires:	bubblewrap
 Requires:	cairo-gobject
-Requires:	ffmpeg
 Requires:	poppler-glib
 Requires:	gdk-pixbuf2-modules
 Requires:	perl-Image-ExifTool
