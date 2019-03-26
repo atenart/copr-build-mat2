@@ -10,6 +10,18 @@ Source0:	https://0xacab.org/jvoisin/mat2/-/archive/%{version}/%{name}-%{version}
 BuildRequires:	python3-devel
 BuildArch:	noarch
 
+# %check dependencies
+BuildRequires:	python3
+BuildRequires:	python3-gobject
+BuildRequires:	python3-mutagen
+BuildRequires:	python3-cairo
+BuildRequires:	bubblewrap
+BuildRequires:	cairo-gobject
+BuildRequires:	poppler-glib
+BuildRequires:	gdk-pixbuf2-modules
+BuildRequires:	perl-Image-ExifTool
+BuildRequires:	mailcap
+
 Requires:	python3
 Requires:	python3-gobject
 Requires:	python3-mutagen
@@ -57,9 +69,8 @@ dedicated menu item.
 install -m 0644 -D nautilus/mat2.py %{buildroot}/usr/share/nautilus-python/extensions/mat2.py
 install -m 0644 -D doc/mat2.1 %{buildroot}%{_mandir}/man1/mat2.1
 
-#%check
-#%{__python3} setup.py test
-#%{__python3} mat2 -c
+%check
+%{__python3} -m unittest discover
 
 %files
 %{python3_sitelib}/*
