@@ -1,6 +1,6 @@
 Name:		mat2
 Version:	0.8.0
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	Mat2 removes metadata from common file types.
 
 License:	GPLv3+
@@ -73,6 +73,10 @@ install -m 0644 -D doc/mat2.1 %{buildroot}%{_mandir}/man1/mat2.1
 %license LICENSE
 
 %changelog
+* Wed Mar 27 2019 Antoine Tenart <antoine.tenart@ack.tf> - 0.8.0-2
+- Install mat2's man page and docs.
+- Stop listing ffmpeg as a mandatory dependency.
+
 * Fri Mar 22 2019 Antoine Tenart <antoine.tenart@ack.tf> - 0.8.0-1
 - Bump to 0.8.0.
 - See https://0xacab.org/jvoisin/mat2/tags/0.8.0
