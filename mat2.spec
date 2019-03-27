@@ -62,14 +62,14 @@ install -m 0644 -D doc/mat2.1 %{buildroot}%{_mandir}/man1/mat2.1
 #%{__python3} mat2 -c
 
 %files
-%license LICENSE
 %{python3_sitelib}/*
 %{_bindir}/%{name}
 %{_mandir}/man1/mat2.1*
+%license LICENSE
 
 %files -n mat2-nautilus
-%license LICENSE
 /usr/share/nautilus-python/extensions/mat2.py
+%license LICENSE
 
 %changelog
 * Fri Mar 22 2019 Antoine Tenart <antoine.tenart@ack.tf> - 0.8.0-1
