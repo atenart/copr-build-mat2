@@ -66,6 +66,7 @@ install -m 0644 -D doc/mat2.1 %{buildroot}%{_mandir}/man1/mat2.1
 %{_bindir}/%{name}
 %{_mandir}/man1/mat2.1*
 %license LICENSE
+%doc README.md doc/*
 
 %files -n mat2-nautilus
 /usr/share/nautilus-python/extensions/mat2.py
