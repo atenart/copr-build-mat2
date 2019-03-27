@@ -81,7 +81,7 @@ install -m 0644 -D doc/mat2.1 %{buildroot}%{_mandir}/man1/mat2.1
 - Bump to 0.6.0.
 - See https://0xacab.org/jvoisin/mat2/tags/0.6.0
 
-* Thu Oct 24 2018 Antoine Tenart <antoine.tenart@ack.tf> - 0.5.0-1
+* Wed Oct 24 2018 Antoine Tenart <antoine.tenart@ack.tf> - 0.5.0-1
 - Bump to 0.5.0.
 - See https://0xacab.org/jvoisin/mat2/tags/0.5.0
 
@@ -89,7 +89,7 @@ install -m 0644 -D doc/mat2.1 %{buildroot}%{_mandir}/man1/mat2.1
 - Bump to 0.4.0.
 - See https://0xacab.org/jvoisin/mat2/tags/0.4.0
 
-* Thu Sep 01 2018 Antoine Tenart <antoine.tenart@ack.tf> - 0.3.1-1
+* Sat Sep 01 2018 Antoine Tenart <antoine.tenart@ack.tf> - 0.3.1-1
 - Bump to 0.3.1.
 - See https://0xacab.org/jvoisin/mat2/tags/0.3.1
 
@@ -97,11 +97,11 @@ install -m 0644 -D doc/mat2.1 %{buildroot}%{_mandir}/man1/mat2.1
 - Bump to 0.3.0.
 - See https://0xacab.org/jvoisin/mat2/tags/0.3.0
 
-* Tue Jul 11 2018 Antoine Tenart <antoine.tenart@ack.tf> - 0.2.0-1
+* Wed Jul 11 2018 Antoine Tenart <antoine.tenart@ack.tf> - 0.2.0-1
 - Bump to 0.2.0.
 - See https://0xacab.org/jvoisin/mat2/tags/0.2.0
 
-* Tue Jul 06 2018 Antoine Tenart <antoine.tenart@ack.tf> - 0.1.3-1
+* Fri Jul 06 2018 Antoine Tenart <antoine.tenart@ack.tf> - 0.1.3-1
 - Bump to 0.1.3.
 - See https://0xacab.org/jvoisin/mat2/tags/0.1.3
 - See https://0xacab.org/jvoisin/mat2/tags/0.1.2
