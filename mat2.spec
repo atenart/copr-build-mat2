@@ -5,10 +5,14 @@ Summary:	Mat2 removes metadata from common file types.
 
 License:	GPLv3+
 URL:		https://0xacab.org/jvoisin/mat2
-Source0:	https://0xacab.org/jvoisin/mat2/-/archive/%{version}/%{name}-%{version}.tar.bz2
+Source0:	https://0xacab.org/jvoisin/mat2/-/archive/%{version}/%{name}-%{version}.tar.gz
+Source1:	https://0xacab.org/jvoisin/mat2/uploads/376dd84937057417b8c6f6a370bda679/mat2-0.8.0.tar.gz.asc
+Source2:	gpgkey-9FCDEE9E1A381F311EA62A7404D041E8171901CC.gpg
+
+BuildArch:	noarch
 
 BuildRequires:	python3-devel
-BuildArch:	noarch
+BuildRequires:	gnupg2
 
 # %check dependencies
 BuildRequires:	python3
@@ -59,6 +63,7 @@ Mat2 Nautilus extension to allow removing metadata using Mat2 using a
 dedicated menu item.
 
 %prep
+gpgv2 --keyring %{SOURCE2} %{SOURCE1} %{SOURCE0}
 %setup -q
 
 %build
