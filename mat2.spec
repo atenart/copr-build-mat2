@@ -1,12 +1,12 @@
 Name:		mat2
-Version:	0.9.0
+Version:	0.10.0
 Release:	1%{?dist}
 Summary:	Mat2 removes metadata from common file types.
 
 License:	GPLv3+
 URL:		https://0xacab.org/jvoisin/mat2
 Source0:	https://0xacab.org/jvoisin/mat2/-/archive/%{version}/%{name}-%{version}.tar.gz
-Source1:	https://0xacab.org/jvoisin/mat2/uploads/6040fa3121b0e45ca67838ddca960c0e/mat2-0.9.0.tar.gz.asc
+Source1:	https://0xacab.org/jvoisin/mat2/uploads/8c62aff50acf08820d5e2bbc30aca64e/mat2-0.10.0.tar.gz.asc
 Source2:	gpgkey-9FCDEE9E1A381F311EA62A7404D041E8171901CC.gpg
 
 BuildArch:	noarch
@@ -74,8 +74,8 @@ gpgv2 --keyring %{SOURCE2} %{SOURCE1} %{SOURCE0}
 install -m 0644 -D nautilus/mat2.py %{buildroot}/usr/share/nautilus-python/extensions/mat2.py
 install -m 0644 -D doc/mat2.1 %{buildroot}%{_mandir}/man1/mat2.1
 
-#%check
-#%{__python3} -m unittest discover
+%check
+%{__python3} -m unittest discover
 
 %files
 %{python3_sitelib}/*
@@ -90,6 +90,10 @@ install -m 0644 -D doc/mat2.1 %{buildroot}%{_mandir}/man1/mat2.1
 %doc nautilus/README.md
 
 %changelog
+* Mon Dec 02 2019 Antoine Tenart <antoine.tenart@ack.tf> - 0.10.0-1
+- Bump to 0.10.0.
+- See https://0xacab.org/jvoisin/mat2/tags/0.10.0
+
 * Sat May 11 2019 Antoine Tenart <antoine.tenart@ack.tf> - 0.9.0-1
 - Bump to 0.9.0.
 - See https://0xacab.org/jvoisin/mat2/tags/0.9.0
