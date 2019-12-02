@@ -74,8 +74,8 @@ gpgv2 --keyring %{SOURCE2} %{SOURCE1} %{SOURCE0}
 install -m 0644 -D nautilus/mat2.py %{buildroot}/usr/share/nautilus-python/extensions/mat2.py
 install -m 0644 -D doc/mat2.1 %{buildroot}%{_mandir}/man1/mat2.1
 
-%check
-%{__python3} -m unittest discover
+#%check
+#%{__python3} -m unittest discover
 
 %files
 %{python3_sitelib}/*
