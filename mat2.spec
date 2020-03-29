@@ -1,12 +1,12 @@
 Name:		mat2
-Version:	0.10.1
+Version:	0.11.0
 Release:	1%{?dist}
 Summary:	Mat2 removes metadata from common file types.
 
 License:	GPLv3+
 URL:		https://0xacab.org/jvoisin/mat2
 Source0:	https://0xacab.org/jvoisin/mat2/-/archive/%{version}/%{name}-%{version}.tar.gz
-Source1:	https://0xacab.org/jvoisin/mat2/uploads/52c39c3e969ca4a2fe669abd7b70e4db/mat2-0.10.1.tar.gz.asc
+Source1:	https://0xacab.org/jvoisin/mat2/uploads/0f66d648ede0b98804b50f487e9d694c/mat2-0.11.0.tar.gz.asc
 Source2:	gpgkey-9FCDEE9E1A381F311EA62A7404D041E8171901CC.gpg
 
 BuildArch:	noarch
@@ -90,6 +90,10 @@ install -m 0644 -D doc/mat2.1 %{buildroot}%{_mandir}/man1/mat2.1
 %doc nautilus/README.md
 
 %changelog
+* Sun Mar 29 2020 Antoine Tenart <antoine.tenart@ack.tf> - 0.11.0-1
+- Bump to 0.11.0.
+- See https://0xacab.org/jvoisin/mat2/-/blob/master/CHANGELOG.md#0110-2020-03-29
+
 * Mon Feb 10 2020 Antoine Tenart <antoine.tenart@ack.tf> - 0.10.1-1
 - Bump to 0.10.1.
 - See https://0xacab.org/jvoisin/mat2/tags/0.10.1
