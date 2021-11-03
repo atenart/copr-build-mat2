@@ -16,26 +16,27 @@ BuildRequires:	gnupg2
 
 # %check dependencies
 BuildRequires:	python3
+BuildRequires:	python3-cairo
 BuildRequires:	python3-gobject
 BuildRequires:	python3-mutagen
-BuildRequires:	python3-cairo
+BuildRequires:	python3-setuptools
 BuildRequires:	bubblewrap
 BuildRequires:	cairo-gobject
-BuildRequires:	poppler-glib
 BuildRequires:	gdk-pixbuf2-modules
-BuildRequires:	perl-Image-ExifTool
 BuildRequires:	mailcap
+BuildRequires:	perl-Image-ExifTool
+BuildRequires:	poppler-glib
 
 Requires:	python3
+Requires:	python3-cairo
 Requires:	python3-gobject
 Requires:	python3-mutagen
-Requires:	python3-cairo
 Requires:	bubblewrap
 Requires:	cairo-gobject
-Requires:	poppler-glib
 Requires:	gdk-pixbuf2-modules
-Requires:	perl-Image-ExifTool
 Requires:	mailcap
+Requires:	perl-Image-ExifTool
+Requires:	poppler-glib
 
 %description
 Metadata consist of information that characterizes data.
