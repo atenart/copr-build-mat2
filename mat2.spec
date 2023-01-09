@@ -1,12 +1,12 @@
 Name:		mat2
-Version:	0.13.0
+Version:	0.13.1
 Release:	1%{?dist}
 Summary:	Mat2 removes metadata from common file types.
 
 License:	GPLv3+
 URL:		https://0xacab.org/jvoisin/mat2
 Source0:	https://0xacab.org/jvoisin/mat2/-/archive/%{version}/%{name}-%{version}.tar.gz
-Source1:	https://0xacab.org/jvoisin/mat2/uploads/b8b7bce2a45aa6c1b2b48432025b2fef/mat2-0.13.0.tar.gz.asc
+Source1:	https://0xacab.org/jvoisin/mat2/uploads/5058fa3903cf7c9dec8f262018669bec/mat2-0.13.1.tar.gz.asc
 Source2:	gpgkey-9FCDEE9E1A381F311EA62A7404D041E8171901CC.gpg
 
 BuildArch:	noarch
@@ -53,16 +53,6 @@ Maybe you don't want to disclose those information on the web.
 This is precisely the job of MAT2: getting rid, as much as possible, of
 metadata.
 
-%package -n mat2-nautilus
-Summary: Mat2 Nautilus extension
-Requires: mat2
-Requires: nautilus
-Requires: python3-nautilus
-
-%description -n mat2-nautilus
-Mat2 Nautilus extension to allow removing metadata using Mat2 using a
-dedicated menu item.
-
 %prep
 gpgv2 --keyring %{SOURCE2} %{SOURCE1} %{SOURCE0}
 %setup -q
@@ -72,7 +62,6 @@ gpgv2 --keyring %{SOURCE2} %{SOURCE1} %{SOURCE0}
 
 %install
 %py3_install
-install -m 0644 -D nautilus/mat2.py %{buildroot}/usr/share/nautilus-python/extensions/mat2.py
 install -m 0644 -D doc/mat2.1 %{buildroot}%{_mandir}/man1/mat2.1
 
 #%check
@@ -85,12 +74,12 @@ install -m 0644 -D doc/mat2.1 %{buildroot}%{_mandir}/man1/mat2.1
 %license LICENSE
 %doc README.md doc/*
 
-%files -n mat2-nautilus
-/usr/share/nautilus-python/extensions/mat2.py
-%license LICENSE
-%doc nautilus/README.md
-
 %changelog
+* Mon Jan 09 2023 Antoine Tenart <antoine.tenart@ack.tf> - 0.13.1-1
+- Bump to 0.13.1.
+- Due to upstream removal, removed the mat2-nautilus package.
+- See https://0xacab.org/jvoisin/mat2/-/releases/0.13.1
+
 * Mon Jul 11 2022 Antoine Tenart <antoine.tenart@ack.tf> - 0.13.0-1
 - Bump to 0.13.0.
 - See https://0xacab.org/jvoisin/mat2/-/releases/0.13.0
