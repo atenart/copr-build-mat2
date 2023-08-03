@@ -1,6 +1,6 @@
 Name:		mat2
 Version:	0.13.4
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	Mat2 removes metadata from common file types.
 
 License:	GPLv3+
@@ -34,6 +34,7 @@ Requires:	python3-mutagen
 Requires:	bubblewrap
 Requires:	cairo-gobject
 Requires:	gdk-pixbuf2-modules
+Requires:	librsvg2
 Requires:	mailcap
 Requires:	perl-Image-ExifTool
 Requires:	poppler-glib
@@ -76,6 +77,9 @@ install -m 0644 -D doc/mat2.1 %{buildroot}%{_mandir}/man1/mat2.1
 %doc README.md doc/*
 
 %changelog
+* Thu Aug 03 2023 Antoine Tenart <antoine.tenart@ack.tf> - 0.13.4-2
+- Add librsvg2 as a dependency.
+
 * Thu Aug 03 2023 Antoine Tenart <antoine.tenart@ack.tf> - 0.13.4-1
 - Bump to 0.13.4.
 - See https://0xacab.org/jvoisin/mat2/-/releases/0.13.4
