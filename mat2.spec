@@ -62,6 +62,7 @@ gpgv2 --keyring %{SOURCE2} %{SOURCE1} %{SOURCE0}
 
 %install
 %py3_install
+rm -rf %{buildroot}/usr/man
 install -m 0644 -D doc/mat2.1 %{buildroot}%{_mandir}/man1/mat2.1
 
 #%check
